@@ -1,0 +1,54 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #0275d1;
+}
+
+.App{
+    width: 50%;
+    margin: 100px auto;
+    background-color: #3f51b5;
+    padding: 20px;
+  form{
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  
+    @at-root{
+      input,button{
+        padding: 7px;
+        border-radius: 3px;
+        border: none
+      }
+      
+    
+
+      button{
+        margin-top: 10px;
+        background-color: #596bce;
+        color: #FFF;
+        cursor: pointer;
+      }
+    }  
+  }
+  
+  ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    li{
+      background-color: #000d53;
+      color: #FFF;
+      padding: 7px;
+      margin: 7px 0;
+      border-radius: 4px;
+
+      &:last-child{
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
+
