@@ -24,6 +24,7 @@ class App extends Component{
         const api = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}`),
             data = await api.json();
         
+        // Append Data To State To Pass It To [Weather] Component 
         this.setState({
           temp: data.main.temp,
           city:data.name,
@@ -41,7 +42,13 @@ class App extends Component{
       return (
         <div className="App">
           <Form getWeather={this.getWeather}/>
-          <Weather/>
+          <Weather
+            temp= {this.state.temp}
+            city= {this.state.city}
+            country= {this.state.country}
+            hum= {this.state.hum}
+            desc= {this.state.desc}
+          />
         </div>
       );
     }
